@@ -11,8 +11,10 @@
 \usepackage[utf8]{inputenc}  % UTF8 Encoding einschalten
 \usepackage[ngerman]{babel}  % Neue deutsche Rechtschreibung
 \usepackage[T1]{fontenc}     % Ausgabe von westeuropäischen Zeichen (auch Umlaute)
+\usepackage{uarial}
+\renewcommand{\familydefault}{\sfdefault}
 \usepackage{microtype}       % Trennung von Wörtern wird besser umgesetzt
-\usepackage{lmodern}         % Nicht-gerasterte Schriftarten (bei MikTeX erforderlich)
+\usepackage{anyfontsize}
 \usepackage{graphicx}        % Einbinden von Grafiken erlauben
 \usepackage{wrapfig}         % Grafiken fließend im Text
 \usepackage{setspace}        % Zeilenabstand \singlespacing, \onehalfspaceing, \doublespacing
@@ -65,7 +67,7 @@
 	hyperref = true,                % Links sind klickbar auch in der Quelle
 	%backref = true,                % Referenz, auf den Text an die zitierte Stelle
 	bibencoding = auto,
-	giveninits = true,              % Vornamen werden abgekürzt
+	uniquename=init,giveninits,              % Vornamen werden abgekürzt
 	doi=false,                      % DOI nicht anzeigen
 	isbn=false,                     % ISBN nicht anzeigen
     alldates=short                  % Datum immer als DD.MM.YYYY anzeigen
@@ -81,7 +83,6 @@
   urlseen = {Einsichtnahme:},                      % Ändern des Titels von "besucht am"
 }
 \usepackage[babel,german=quotes]{csquotes}         % Deutsche Anführungszeichen + Zitate
-
 
 % ---- Für Mathevorlage
 \usepackage{amsmath}    % Erweiterung vom Mathe-Satz
