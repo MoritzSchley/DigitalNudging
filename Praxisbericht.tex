@@ -58,7 +58,7 @@
 \singlespacing
 \include{Inhalt/01_Standard/titelseite}  % Titelseite
 \newcounter{savepage}
-\pagenumbering{Roman}                    % Römische Seitenzahlen
+\pagenumbering{roman}                    % Römische Seitenzahlen
 \onehalfspacing
 
 % ------ Erklärung, Sperrvermerk, Abstact
@@ -74,9 +74,6 @@
 \pagestyle{plain}
 \include{Inhalt/03_Verzeichnisse/abkuerzungen}
 \listoffigures                          % Erzeugen des Abbildungsverzeichnisses 
-%\listoftables                           % Erzeugen des Tabellenverzeichnisses
-%\renewcommand{\lstlistlistingname}{Quellcodeverzeichnis}
-\lstlistoflistings                      % Erzeugen des Listenverzeichnisses
 \setcounter{savepage}{\value{page}}
 
 
@@ -90,17 +87,23 @@
 \onehalfspacing
 %INHALT HIER mit \include{Inhalt/04_Inhalt/FILENAME}
 
-\include{Inhalt/04_Inhalt/01_Einfuehrung}
-\include{Inhalt/04_Inhalt/02_Beispiele}
-\include{Inhalt/04_Inhalt/03_RisikenProbleme}
+\include{Inhalt/04_Inhalt/00_Einleitung.tex}
+\include{Inhalt/04_Inhalt/01_Nudging.tex}
+\include{Inhalt/04_Inhalt/02_WissenschaftlicheGrundlagen.tex}
+\include{Inhalt/04_Inhalt/03_WissenschaftlicheDisziplin.tex}
+\include{Inhalt/04_Inhalt/04_ManipulationNudging.tex}
+\include{Inhalt/04_Inhalt/05_DigitalNudging.tex}
+\include{Inhalt/04_Inhalt/06_BeispieleDigitalNudging.tex}
+\include{Inhalt/04_Inhalt/07_RisikenProbleme.tex}
+\include{Inhalt/04_Inhalt/08_Fazit.tex}
 
 % ---- Literaturverzeichnis
 \cleardoublepage
 \renewcommand*{\chapterpagestyle}{plain}
 \pagestyle{plain}
 \pagenumbering{Roman}                   % Römische Seitenzahlen
-\setcounter{page}{\numexpr\value{savepage}+1}
-\printbibliography[title=Literaturverzeichnis]
+
+\printbibliography[title=Literatur]
 
 % ---- Anhang
 \appendix
